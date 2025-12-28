@@ -43,11 +43,11 @@ button{
     cursor: pointer;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
-/*
+
 button:hover{
     background-color: darkgreen;
     color: white;
-}*/
+}
 
 .delete {
   margin-top: auto;
@@ -70,4 +70,14 @@ h1{
 
 h1:hover{
     color: aqua;
+}
+
+ul{
+    align-self: flex-start;
+    width: 100%;
+}
+
+ul li{
+    list-style: none;
+    font-size: 30px;
 }

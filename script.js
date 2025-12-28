@@ -7,21 +7,23 @@ let itemsList = document.getElementById("itmList");
 let deleteItems = document.getElementById("clearItems");
 
 //Section ajouter les items
-
 btn.addEventListener("click", () => {
 	addItems();
 });
 
 //fonction ajouter les items
 function addItems() {
+	if (input.value.trim() === " ") return;
+
 	//creation d'items en list
-	let li = document.createElement("li");
+	const li = document.createElement("li");
+	li.textContent = input.value;
 
-	li.textContent = input;
-
+	//ajoutons nos element au parent ul
 	itemsList.appendChild(li);
 
-	input = "";
+	//Remettons notre input vide
+	input.value = "";
 }
 
 //Section clear items
