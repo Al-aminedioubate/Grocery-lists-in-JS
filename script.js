@@ -29,14 +29,14 @@ function addItems() {
 //Section clear items
 //la fonction permettant d'effacer tous les items sur la liste
 function deleteItms() {
+	if (itemsList.children.length === 0) {
+		//on verifie que la liste n'est pas vide avant de vider
+		alert("Impossible de supprimer car la liste est vide!");
+		return;
+	}
+
 	const confirmation = confirm("Êtes-vous sûr de vouloir supprimer tous les items ?");
 	if (confirmation) {
-		if (itemsList.children.length === 0) {
-			//on verifie que la liste n'est pas vide avant de vider
-			alert("Impossible de supprimer car la liste est vide!");
-			return;
-		}
-
 		itemsList.innerHTML = "";
 		alert("Vous avez supprimé les items de votre liste !");
 	} else {
