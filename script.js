@@ -27,10 +27,16 @@ function addItems() {
 }
 
 //Section clear items
-deleteItems.addEventListener("click", () => {
-	deleteItms();
-});
-
+//la fonction permettant d'effacer tous les items sur la liste
 function deleteItms() {
-	console.log("items cleared");
+	const confirmation = confirm("Êtes-vous sûr de vouloir supprimer tous les items ?");
+	if (confirmation) {
+		itemsList.innerHTML = "";
+		alert("Vous avez supprimé les items de votre liste !");
+	} else {
+		alert("Suppression annulée.");
+	}
 }
+
+//Evenement de suppression
+deleteItems.addEventListener("click", deleteItms);
