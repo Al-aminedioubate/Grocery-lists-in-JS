@@ -94,7 +94,6 @@ li i{
 
 li i:hover{
     cursor: pointer;
-    cursor: pointer;
     color: darkred;
     transform: scale(1.1);
 }
