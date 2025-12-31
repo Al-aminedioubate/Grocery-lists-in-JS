@@ -21,7 +21,7 @@ function addItems() {
 	//ajoutons notre icon sur la liste
 	li.appendChild(trash);
 
-	//Faisons une suppression individuel
+	//Faisons une suppression individuelle
 	trash.addEventListener("click", () => {
 		li.remove();
 	});
