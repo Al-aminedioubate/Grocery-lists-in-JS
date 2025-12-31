@@ -77,7 +77,24 @@ ul{
     width: 100%;
 }
 
-ul li{
-    list-style: none;
-    font-size: 30px;
+#itmList li {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-around;
+  align-items: center;
+   padding:8px 12px;
+}
+
+li i{
+    display: flex;
+    color: aqua;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+li i:hover{
+    cursor: pointer;
+    cursor: pointer;
+    color: darkred;
+    transform: scale(1.1);
 }
