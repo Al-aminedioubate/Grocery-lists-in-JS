@@ -18,6 +18,7 @@ function addItems() {
 	const trash = document.createElement("i");
 	trash.classList.add("fa-solid", "fa-trash", "delete-icon");
 
+	//ajoutons notre icon sur la liste
 	li.appendChild(trash);
 
 	//Faisons une suppression individuel
