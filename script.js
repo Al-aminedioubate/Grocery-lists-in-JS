@@ -24,10 +24,14 @@ function addItems() {
 	//Faisons une suppression individuelle
 	trash.addEventListener("click", () => {
 		li.remove();
+		itemCount();
 	});
 
 	//ajoutons nos element au parent ul
 	itemsList.appendChild(li);
+
+	//appel de la fonction qui compte les items
+	itemCount();
 
 	//Remettons notre input vide
 	input.value = "";
@@ -37,6 +41,12 @@ function addItems() {
 btn.addEventListener("click", () => {
 	addItems();
 });
+
+//Creons une fonction permettant de compter le nombre items sur notre liste
+function itemCount() {
+	let totalItem = itemsList.children.length;
+	document.getElementById("totalItem").textContent = `Total Items: ${totalItem}`;
+}
 
 //Section clear items
 //la fonction permettant d'effacer tous les items sur la liste et verifier d'abord avant de supprimer et valide que la liste n'est pas vide car on peut pas vider une liste deja vide
@@ -50,11 +60,17 @@ function deleteItms() {
 	const confirmation = confirm("Êtes-vous sûr de vouloir supprimer tous les items ?");
 	if (confirmation) {
 		itemsList.innerHTML = "";
+
 		alert("Vous avez supprimé les items de votre liste !");
 	} else {
 		alert("Suppression annulée.");
 	}
+
+	//on l'appel ici pour faire une mise a jour du compte apres la suppression.
+	itemCount();
 }
 
 //Evenement de suppression
 deleteItems.addEventListener("click", deleteItms);
+
+//itemCount();
