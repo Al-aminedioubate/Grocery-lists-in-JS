@@ -60,7 +60,6 @@ function deleteItms() {
 	const confirmation = confirm("Êtes-vous sûr de vouloir supprimer tous les items ?");
 	if (confirmation) {
 		itemsList.innerHTML = "";
-
 		alert("Vous avez supprimé les items de votre liste !");
 	} else {
 		alert("Suppression annulée.");
