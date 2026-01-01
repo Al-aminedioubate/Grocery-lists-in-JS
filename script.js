@@ -2,13 +2,16 @@
 let input = document.getElementById("inputItms");
 let btn = document.getElementById("addBtn");
 
-//Delete and items Liste section
+//Delete and items Liste variable
 let itemsList = document.getElementById("itmList");
 let deleteItems = document.getElementById("clearItems");
 
 //fonction ajouter les items
 function addItems() {
-	if (input.value.trim() === " ") return;
+	if (!input.value.trim()) {
+		alert("Veillez rentrer un item !");
+		return;
+	}
 
 	//creation d'items en list
 	const li = document.createElement("li");
@@ -19,7 +22,9 @@ function addItems() {
 	trash.classList.add("fa-solid", "fa-trash", "delete-icon");
 
 	//ajoutons notre icon sur la liste
-	li.appendChild(trash);
+	if (input.value.trim() !== " ") {
+		li.appendChild(trash);
+	}
 
 	//Faisons une suppression individuelle
 	trash.addEventListener("click", () => {
@@ -71,5 +76,3 @@ function deleteItms() {
 
 //Evenement de suppression
 deleteItems.addEventListener("click", deleteItms);
-
-//itemCount();
