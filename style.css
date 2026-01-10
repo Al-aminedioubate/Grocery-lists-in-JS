@@ -1,26 +1,26 @@
 /*Mise en page du notre page corps*/
 body {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #110e0e;
+  background: white;
+  height: 80vh;
 }
 
 /*Mise en page de container parents*/
 .container{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;/*Justify content ne fonctionne pas dans un container si la hauteur n'est pas definie*/
-   align-items: center;
-   height: fit-content;
-   width: 300px;
-   overflow: auto;  /*cela nous mets un scroll bar sur X et Y quand nos element depasse la taille de la page*/
-   background: #ffffff;
-   border: 1px solid #97e309;
-   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-   margin: 70px auto;
-   padding: 50px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 300px;
+  background:whitesmoke;
+  box-shadow: 0 4px 12px rgba(0, 0, 0.15);  
+  padding: 50px;
+  border-radius: 20px;
+  margin-top: 30vh;
 }
 /*Section manipulation de la form*/
 .form-row{
@@ -30,29 +30,31 @@ body {
 }
 /*Section entrer des items*/
 input{
-    flex: 1;
-    padding: 8px 16px;
-    text-align: center;
-    border-color: aqua;
-    color: black;
-    background-color: white;
+  flex: 1;
+  padding: 8px 16px;
+  text-align: center;
+  border-color: aqua;
+  color: black;
+  background-color: white;
+  border-radius: 6px;
 }
 
 /*Section bouton pour ajouter les items*/
 button{
-    flex: 1;
-    border: none;
-    padding: 10px 18px;
-    background-color: aqua;
-    text-align: center;
-    border-radius: 6px;
-    cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  border: none;
+  padding: 10px 18px;
+  background-color: aqua;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  text-transform: capitalize;
 }
 
 button:hover{
-    background-color: darkgreen;
-    color: white;
+  background-color: darkgreen;
+  color: white;
 }
 
 /*Section suppression de tous les items*/
@@ -72,18 +74,18 @@ button:hover{
 
 /*Section titre*/
 h1{
-    text-align: center;
-    cursor: pointer;
+  text-align: center;
+  cursor: pointer;
 }
 
 h1:hover{
-    color: aqua;
+  color: aqua;
 }
 
 /*Section liste ul*/
 ul{
-    align-self: flex-start;
-    width: 100%;
+  align-self: flex-start;
+  width: 100%;
 }
 
 /*Section Liste items li*/
@@ -97,17 +99,17 @@ ul{
 }
 
 li i{
-   display: flex;
-    flex-shrink: 0;     /*Cela permet a notre icon de s'adapter quand le text est long au lie de deborder*/
-    color: aqua;
-    font-size: 15px;
-    transition: 0.2s;
+  display: flex;
+  flex-shrink: 0;     /*Cela permet a notre icon de s'adapter quand le text est long au lie de deborder*/
+  color: aqua;
+  font-size: 15px;
+  transition: 0.2s;
 }
 
 li i:hover{
-    cursor: pointer;
-    color: darkred;
-    transform: scale(1.1);
+  cursor: pointer;
+  color: darkred;
+  transform: scale(1.1);
 }
 
 /*Section Ligne horizontale*/
@@ -122,7 +124,7 @@ hr {
 #totalItem {
   margin-top: 10px;
   font-weight: 600;
-  color: #555;
+  color: black;
 }
 
 /* optionnel : scrollbar plus propre */
